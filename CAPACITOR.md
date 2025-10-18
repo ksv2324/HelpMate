@@ -114,6 +114,11 @@ Triggers on:
 - Push to main/master with `[Update]` in commit message
 - Pull requests to main/master
 
+Environment:
+- Node.js 20
+- JDK 21 (required for Capacitor 7)
+- Android SDK 34 with Build Tools 34.0.0
+
 Outputs:
 - Debug APK artifact (hand2hand-debug-apk)
 - Release APK artifact (hand2hand-release-apk, unsigned)
@@ -159,7 +164,7 @@ To create a signed release APK for Google Play:
 ### Android Build Issues
 
 **Gradle sync failed:**
-- Ensure JDK 17 is installed
+- Ensure JDK 21 is installed (required for Capacitor 7)
 - Check Android SDK is properly installed
 - Try `./gradlew clean` in the android directory
 

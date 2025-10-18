@@ -84,7 +84,7 @@ All features work seamlessly without any special setup!
 - Check that Node.js version is 16 or higher
 
 ### Android Studio can't open project
-- Install JDK 17
+- Install JDK 21 (required for Capacitor 7)
 - Install Android SDK (via Android Studio)
 - Try syncing again: `npm run sync:android`
 

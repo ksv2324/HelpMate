@@ -71,7 +71,7 @@ The `CapacitorUtils` class provides a clean abstraction over Capacitor APIs:
 Automated Android APK builds:
 - Triggers on push to main/master with `[Update]` in commit message
 - Also triggers on pull requests
-- Uses Ubuntu runner with Node.js 20 and JDK 17
+- Uses Ubuntu runner with Node.js 20 and JDK 21 (required for Capacitor 7)
 - Builds both debug and release APKs
 - Uploads APKs as GitHub Actions artifacts
 - 30-day artifact retention
@@ -79,10 +79,11 @@ Automated Android APK builds:
 Build Steps:
 1. Install Node.js dependencies
 2. Build web app (`npm run build`)
-3. Setup Android SDK and JDK
-4. Sync Capacitor (`npx cap sync android`)
-5. Build APKs using Gradle
-6. Upload artifacts
+3. Setup Android SDK and JDK 21
+4. Add Android platform (`npx cap add android`)
+5. Sync Capacitor (`npx cap sync android`)
+6. Build APKs using Gradle
+7. Upload artifacts
 
 **`.github/workflows/github-pages.yml`**
 
