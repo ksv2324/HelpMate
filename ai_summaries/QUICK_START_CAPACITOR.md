@@ -57,7 +57,7 @@ Automatically deploys to GitHub Pages.
 
 1. Go to GitHub Actions tab
 2. Find latest successful "Android Build" workflow
-3. Download `hand2hand-debug-apk` artifact
+3. Download `helpmate-debug-apk` artifact
 4. Extract the ZIP file
 5. Install `app-debug.apk` on Android device
    - Enable "Install from Unknown Sources" if needed

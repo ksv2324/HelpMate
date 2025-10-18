@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.novanexus.hand2hand',
-  appName: 'Hand2Hand',
+  appId: 'io.novanexus.helpmate',
+  appName: 'HelpMate',
   // webDir matches vite.config.ts build.outDir setting
   webDir: 'build',
   server: {

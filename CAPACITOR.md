@@ -1,6 +1,6 @@
 # Capacitor Android App Setup
 
-This document describes the Capacitor.js integration for converting the Hand2Hand web app into a native Android application.
+This document describes the Capacitor.js integration for converting the HelpMate web app into a native Android application.
 
 ## Overview
 
@@ -100,8 +100,8 @@ The app uses native features through the `CapacitorUtils` class:
 ### capacitor.config.ts
 
 Key configuration options:
-- `appId`: Bundle identifier (io.novanexus.hand2hand)
-- `appName`: Display name (Hand2Hand)
+- `appId`: Bundle identifier (io.novanexus.helpmate)
+- `appName`: Display name (HelpMate)
 - `webDir`: Build output directory (build/)
 - Plugin configurations for SplashScreen and StatusBar
 
@@ -120,8 +120,8 @@ Environment:
 - Android SDK 34 with Build Tools 34.0.0
 
 Outputs:
-- Debug APK artifact (hand2hand-debug-apk)
-- Release APK artifact (hand2hand-release-apk, unsigned)
+- Debug APK artifact (helpmate-debug-apk)
+- Release APK artifact (helpmate-release-apk, unsigned)
 
 ### GitHub Pages Workflow
 **File:** `.github/workflows/github-pages.yml`
@@ -138,16 +138,16 @@ To create a signed release APK for Google Play:
 
 1. Generate a keystore:
    ```bash
-   keytool -genkey -v -keystore hand2hand.keystore -alias hand2hand -keyalg RSA -keysize 2048 -validity 10000
+   keytool -genkey -v -keystore helpmate.keystore -alias helpmate -keyalg RSA -keysize 2048 -validity 10000
    ```
 
 2. Configure signing in `android/app/build.gradle`:
    ```gradle
    signingConfigs {
        release {
-           storeFile file("path/to/hand2hand.keystore")
+           storeFile file("path/to/helpmate.keystore")
            storePassword "your-store-password"
-           keyAlias "hand2hand"
+           keyAlias "helpmate"
            keyPassword "your-key-password"
        }
    }

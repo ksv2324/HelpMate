@@ -52,6 +52,14 @@
     build: {
       target: 'esnext',
       outDir: 'build',
+      rollupOptions: {
+        external: [
+          '@capacitor/core',
+          '@capacitor/splash-screen',
+          '@capacitor/status-bar',
+          '@capacitor/app'
+        ]
+      }
     },
     server: {
       port: 3000,

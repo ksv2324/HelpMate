@@ -1,7 +1,7 @@
 # Capacitor.js Integration Summary
 
 **Date:** October 18, 2025  
-**Task:** Convert Hand2Hand web app into Android application using Capacitor.js
+**Task:** Convert HelpMate web app into Android application using Capacitor.js
 
 ## Changes Overview
 
@@ -238,6 +238,6 @@ See CAPACITOR.md for detailed instructions.
 
 ## Conclusion
 
-The Capacitor.js integration successfully converts Hand2Hand into a hybrid mobile app while maintaining full web compatibility. The implementation follows best practices with minimal invasive changes, comprehensive documentation, and automated CI/CD pipelines for both Android APK builds and GitHub Pages deployment.
+The Capacitor.js integration successfully converts HelpMate into a hybrid mobile app while maintaining full web compatibility. The implementation follows best practices with minimal invasive changes, comprehensive documentation, and automated CI/CD pipelines for both Android APK builds and GitHub Pages deployment.
 
 The modular architecture allows easy extension with additional native features as needed, while the utility class pattern ensures clean separation of concerns and graceful degradation in web mode.
