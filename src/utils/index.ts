@@ -1,0 +1,1 @@
+export { CapacitorUtils } from './capacitor';
