@@ -1,15 +1,17 @@
-import { Capacitor } from '@capacitor/core';
-
 // Dynamic imports for Capacitor plugins to avoid build issues
 let SplashScreen: any = null;
 let StatusBar: any = null;
 let CapApp: any = null;
+let CapacitorInstance: any = null;
 
 // Load plugins dynamically
 const loadPlugins = async () => {
-  if (!Capacitor.isNativePlatform()) return;
-
   try {
+    const capacitorModule = await import('@capacitor/core');
+    CapacitorInstance = capacitorModule.Capacitor;
+
+    if (!CapacitorInstance.isNativePlatform()) return;
+
     const [splashModule, statusModule, appModule] = await Promise.all([
       import('@capacitor/splash-screen'),
       import('@capacitor/status-bar'),
@@ -32,19 +34,19 @@ export class CapacitorUtils {
    * Check if running in a native app context
    */
   static isNative(): boolean {
-    return Capacitor.isNativePlatform();
+    return CapacitorInstance ? CapacitorInstance.isNativePlatform() : false;
   }
 
   /**
    * Initialize all Capacitor plugins
    */
   static async initialize(): Promise<void> {
+    await loadPlugins();
+
     if (!this.isNative()) {
       console.log('Running in web mode, Capacitor plugins not available');
       return;
     }
-
-    await loadPlugins();
 
     try {
       // Hide splash screen after app loads
