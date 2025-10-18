@@ -10,6 +10,11 @@ on:
       - main
       - master
 
+# Explicit permissions for security
+permissions:
+  contents: read
+  actions: write
+
 jobs:
   build:
     name: Build Android APK
