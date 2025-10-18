@@ -4,7 +4,7 @@
   import path from 'path';
 
   export default defineConfig(({ command }) => ({
-    base: command === 'build' ? '/HelpMate/' : '/',
+    base: process.env.VITE_BASE || './',
     plugins: [react()],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
