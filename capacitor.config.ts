@@ -3,6 +3,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 const config: CapacitorConfig = {
   appId: 'io.novanexus.hand2hand',
   appName: 'Hand2Hand',
+  // webDir matches vite.config.ts build.outDir setting
   webDir: 'build',
   server: {
     androidScheme: 'https'

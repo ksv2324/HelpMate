@@ -10,11 +10,12 @@ export default function App() {
   const [userPhone, setUserPhone] = useState('');
 
   // Auto-transition from splash to onboarding after 2 seconds
-  useState(() => {
+  useEffect(() => {
     if (currentScreen === 'splash') {
-      setTimeout(() => setCurrentScreen('onboarding'), 2000);
+      const timer = setTimeout(() => setCurrentScreen('onboarding'), 2000);
+      return () => clearTimeout(timer);
     }
-  });
+  }, [currentScreen]);
 
   // Register back button handler for Android
   useEffect(() => {
