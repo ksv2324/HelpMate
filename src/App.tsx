@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { SplashScreen, OnboardingScreen, LoginScreen, PledgeScreen } from './components/auth';
 import { MainApp, LanguageProvider } from './components/shared';
+import { CapacitorUtils } from './utils';
 
 export type AuthScreen = 'splash' | 'onboarding' | 'login' | 'pledge' | 'main';
 
@@ -14,6 +15,14 @@ export default function App() {
       setTimeout(() => setCurrentScreen('onboarding'), 2000);
     }
   });
+
+  // Register back button handler for Android
+  useEffect(() => {
+    CapacitorUtils.registerBackButtonListener(() => {
+      // Return true to exit app on back button press
+      return currentScreen === 'onboarding';
+    });
+  }, [currentScreen]);
 
   return (
     <LanguageProvider>

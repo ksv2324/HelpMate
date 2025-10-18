@@ -164,3 +164,8 @@ Desktop.ini
 # Temporary files
 *.tmp
 *.temp
+
+# Capacitor
+android/
+ios/
+.capacitor/
