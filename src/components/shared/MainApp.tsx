@@ -8,7 +8,7 @@ import { HomePage } from '../home';
 import { ProfilePage } from '../profile';
 import { NotificationsPage } from '../notifications';
 import { NotificationPreferences, PrivacySecurity, HelpSupport, AboutApp } from '../settings';
-import HandToHandLogo from './HandToHandLogo';
+import HelpMateLogo from './HelpMateLogo';
 import { useLanguage } from './LanguageContext';
 
 interface MainAppProps {
@@ -61,9 +61,9 @@ export default function MainApp({ userPhone }: MainAppProps) {
         <div className="flex items-center justify-between px-4 pt-12 pb-3">
           <div className="flex items-center gap-2">
             <div className="w-10 h-10 bg-[#4c6ef5] rounded-xl flex items-center justify-center shadow-sm">
-              <HandToHandLogo className="w-8 h-8" />
+              <HelpMateLogo className="w-8 h-8" />
             </div>
-            <h1 className="text-gray-900">Hand-to-Hand</h1>
+            <h1 className="text-gray-900">HelpMate</h1>
           </div>
           <div className="flex items-center gap-2">
             <button

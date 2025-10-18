@@ -64,7 +64,7 @@ src/components/
 │   ├── index.ts            # Barrel export
 │   ├── MainApp.tsx
 │   ├── LanguageContext.tsx
-│   └── HandToHandLogo.tsx
+│   └── HelpMateLogo.tsx
 │
 ├── figma/                   # Figma design components
 │   └── ImageWithFallback.tsx

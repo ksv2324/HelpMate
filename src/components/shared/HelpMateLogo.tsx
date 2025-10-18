@@ -1,4 +1,4 @@
-export default function HandToHandLogo({ className = "w-10 h-10" }: { className?: string }) {
+export default function HelpMateLogo({ className = "w-10 h-10" }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 100 100"
@@ -22,7 +22,7 @@ export default function HandToHandLogo({ className = "w-10 h-10" }: { className?
         strokeWidth="2.5"
         strokeLinecap="round"
       />
-      
+
       {/* Right Hand */}
       <path
         d="M75 55 L75 45 L70 40 L65 40 L62 43 L60 45 L58 48 L55 50"
@@ -39,7 +39,7 @@ export default function HandToHandLogo({ className = "w-10 h-10" }: { className?
         strokeWidth="2.5"
         strokeLinecap="round"
       />
-      
+
       {/* Connecting Hands -握手部分 */}
       <ellipse
         cx="50"
@@ -49,7 +49,7 @@ export default function HandToHandLogo({ className = "w-10 h-10" }: { className?
         fill="white"
         opacity="0.9"
       />
-      
+
       {/* Heart Symbol */}
       <path
         d="M50 65 L45 60 Q42 57 42 54 Q42 51 44 49 Q46 47 48 49 L50 51 L52 49 Q54 47 56 49 Q58 51 58 54 Q58 57 55 60 Z"

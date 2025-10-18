@@ -16,7 +16,7 @@ export default function AboutApp({ onBack }: AboutAppProps) {
           >
             <ArrowLeft className="w-5 h-5 text-gray-700" />
           </button>
-          <h1 className="text-gray-900">About Hand-to-Hand</h1>
+          <h1 className="text-gray-900">About HelpMate</h1>
         </div>
       </div>
 
@@ -27,7 +27,7 @@ export default function AboutApp({ onBack }: AboutAppProps) {
           <div className="w-20 h-20 bg-[#4c6ef5] rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
             <Heart className="w-11 h-11 text-white" fill="white" />
           </div>
-          <h2 className="text-gray-900 mb-1">Hand-to-Hand</h2>
+          <h2 className="text-gray-900 mb-1">HelpMate</h2>
           <p className="text-gray-600">Version 1.0.0</p>
         </div>
 
@@ -40,7 +40,7 @@ export default function AboutApp({ onBack }: AboutAppProps) {
             <div>
               <h3 className="text-gray-900 mb-2">Our Purpose</h3>
               <p className="text-gray-700 leading-relaxed">
-                Hand-to-Hand connects people who have extra items with those who need them. We believe in building stronger communities through direct, person-to-person sharing.
+                HelpMate connects people who have extra items with those who need them. We believe in building stronger communities through direct, person-to-person sharing.
               </p>
             </div>
           </div>
@@ -55,7 +55,7 @@ export default function AboutApp({ onBack }: AboutAppProps) {
             <div>
               <h3 className="text-gray-900 mb-2">Why We Built This</h3>
               <p className="text-gray-700 leading-relaxed mb-3">
-                We noticed that many people have usable items they no longer need, while others nearby are searching for those exact things. Hand-to-Hand bridges this gap by:
+                We noticed that many people have usable items they no longer need, while others nearby are searching for those exact things. HelpMate bridges this gap by:
               </p>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start gap-2">
@@ -82,7 +82,7 @@ export default function AboutApp({ onBack }: AboutAppProps) {
               <Heart className="w-5 h-5 text-green-600" />
             </div>
             <div>
-              <h3 className="text-gray-900 mb-2">What Hand-to-Hand Does</h3>
+              <h3 className="text-gray-900 mb-2">What HelpMate Does</h3>
               <div className="space-y-4">
                 <div>
                   <p className="text-gray-900 mb-1">For Donors:</p>
@@ -99,7 +99,7 @@ export default function AboutApp({ onBack }: AboutAppProps) {
                 <div>
                   <p className="text-gray-900 mb-1">No Money Involved:</p>
                   <p className="text-gray-600">
-                    Hand-to-Hand is purely about sharing items - food, clothes, books, and more. Everything is free.
+                    HelpMate is purely about sharing items - food, clothes, books, and more. Everything is free.
                   </p>
                 </div>
               </div>
@@ -162,7 +162,7 @@ export default function AboutApp({ onBack }: AboutAppProps) {
         {/* Footer */}
         <div className="px-4 pb-6 text-center">
           <p className="text-gray-500">
-            © 2024 Hand-to-Hand. Made with ❤️ for the community.
+            © 2024 HelpMate. Made with ❤️ for the community.
           </p>
         </div>
       </div>

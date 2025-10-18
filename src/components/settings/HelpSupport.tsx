@@ -30,8 +30,8 @@ const faqItems = [
   },
   {
     id: '5',
-    question: 'Is Hand-to-Hand free to use?',
-    answer: 'Yes! Hand-to-Hand is completely free for everyone.'
+    question: 'Is HelpMate free to use?',
+    answer: 'Yes! HelpMate is completely free for everyone.'
   },
   {
     id: '6',

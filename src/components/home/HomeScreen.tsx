@@ -79,7 +79,7 @@ export default function HomeScreen({ onNavigate, onSelectDonation }: HomeScreenP
             <div className="w-10 h-10 bg-[#4c6ef5] rounded-xl flex items-center justify-center shadow-sm">
               <Heart className="w-6 h-6 text-white" fill="white" />
             </div>
-            <h1 className="text-gray-900">Hand2Hand</h1>
+            <h1 className="text-gray-900">HelpMate</h1>
           </div>
           <div className="flex items-center gap-3">
             <button

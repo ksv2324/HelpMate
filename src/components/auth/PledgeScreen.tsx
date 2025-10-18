@@ -38,7 +38,7 @@ export default function PledgeScreen({ onAccept }: PledgeScreenProps) {
             <ul className="space-y-3 text-gray-700">
               <li className="flex items-start gap-3">
                 <div className="w-1.5 h-1.5 bg-[#4c6ef5] rounded-full mt-2 flex-shrink-0" />
-                <span>Use Hand2Hand honestly and transparently</span>
+                <span>Use HelpMate honestly and transparently</span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="w-1.5 h-1.5 bg-[#4c6ef5] rounded-full mt-2 flex-shrink-0" />

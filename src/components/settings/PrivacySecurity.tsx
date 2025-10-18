@@ -90,7 +90,7 @@ export default function PrivacySecurity({ onBack }: PrivacySecurityProps) {
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-4">
             <h4 className="text-gray-900 mb-2">Your Privacy Matters</h4>
             <p className="text-gray-700">
-              Hand-to-Hand takes your privacy seriously. We only share your information with users you choose to interact with. Your exact location is never shared - only approximate distance.
+              HelpMate takes your privacy seriously. We only share your information with users you choose to interact with. Your exact location is never shared - only approximate distance.
             </p>
           </div>
         </div>

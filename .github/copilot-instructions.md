@@ -1,7 +1,7 @@
-# Hand2Hand Mobile App - AI Coding Guidelines
+# HelpMate Mobile App - AI Coding Guidelines
 
 ## Project Overview
-This is a React TypeScript mobile app prototype for a donation/request sharing platform called "Hand2Hand". The app facilitates peer-to-peer sharing of goods and services between community members, with multi-language support and a mobile-first design.
+This is a React TypeScript mobile app prototype for a donation/request sharing platform called "HelpMate". The app facilitates peer-to-peer sharing of goods and services between community members, with multi-language support and a mobile-first design.
 
 ## Architecture & Key Components
 

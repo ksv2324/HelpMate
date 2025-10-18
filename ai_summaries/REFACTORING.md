@@ -1,7 +1,7 @@
 # Code Refactoring Documentation
 
 ## Overview
-This document outlines the comprehensive refactoring performed on the Hand2Hand Mobile App codebase to improve maintainability, scalability, and code quality.
+This document outlines the comprehensive refactoring performed on the HelpMate Mobile App codebase to improve maintainability, scalability, and code quality.
 
 ## Project Structure
 
@@ -282,7 +282,7 @@ describe('useForm', () => {
 
 ## Conclusion
 
-This refactoring establishes a solid foundation for the Hand2Hand app, making it easier to:
+This refactoring establishes a solid foundation for the HelpMate app, making it easier to:
 - Add new features
 - Fix bugs
 - Onboard new developers

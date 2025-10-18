@@ -63,7 +63,7 @@ export default function HomePage() {
         <div className="bg-gradient-to-r from-[#4c6ef5] to-[#7950f2] rounded-2xl p-5 text-white shadow-md mb-4">
           <div className="flex items-start justify-between mb-3">
             <div className="flex-1">
-              <h2 className="mb-1">Welcome to Hand-to-Hand</h2>
+              <h2 className="mb-1">Welcome to HelpMate</h2>
               <p className="text-white/90">
                 {t.welcomeMessage}
               </p>

@@ -54,7 +54,7 @@ const translations: Record<Language, Translations> = {
     nearbyRequests: 'Nearby Requests',
     latestActivity: 'Latest Activity',
     welcomeMessage: 'Share what you have, get what you need',
-    howItWorks: 'How Hand-to-Hand Works',
+    howItWorks: 'How HelpMate Works',
     accountSettings: 'Account Settings',
     saveChanges: 'Save Changes',
     name: 'Name',
@@ -66,7 +66,7 @@ const translations: Record<Language, Translations> = {
     notificationPrefs: 'Notification Preferences',
     privacySecurity: 'Privacy & Security',
     helpSupport: 'Help & Support',
-    aboutApp: 'About Hand-to-Hand'
+    aboutApp: 'About HelpMate'
   },
   hi: {
     home: 'होम',
@@ -86,7 +86,7 @@ const translations: Record<Language, Translations> = {
     nearbyRequests: 'आस-पास अनुरोध',
     latestActivity: 'नवीनतम गतिविधि',
     welcomeMessage: 'जो है वह साझा करें, जो चाहिए वह प्राप्त करें',
-    howItWorks: 'हैंड-टू-हैंड कैसे काम करता है',
+    howItWorks: 'HelpMate कैसे काम करता है',
     accountSettings: 'खाता सेटिंग्स',
     saveChanges: 'परिवर्तन सहेजें',
     name: 'नाम',
@@ -98,7 +98,7 @@ const translations: Record<Language, Translations> = {
     notificationPrefs: 'सूचना प्राथमिकताएं',
     privacySecurity: 'गोपनीयता और सुरक्षा',
     helpSupport: 'सहायता और समर्थन',
-    aboutApp: 'हैंड-टू-हैंड के बारे में'
+    aboutApp: 'HelpMate के बारे में'
   },
   bn: {
     home: 'হোম',
@@ -118,7 +118,7 @@ const translations: Record<Language, Translations> = {
     nearbyRequests: 'কাছাকাছি অনুরোধ',
     latestActivity: 'সর্বশেষ কার্যকলাপ',
     welcomeMessage: 'যা আছে শেয়ার করুন, যা প্রয়োজন তা পান',
-    howItWorks: 'হ্যান্ড-টু-হ্যান্ড কীভাবে কাজ করে',
+    howItWorks: 'HelpMate কীভাবে কাজ করে',
     accountSettings: 'অ্যাকাউন্ট সেটিংস',
     saveChanges: 'পরিবর্তন সংরক্ষণ করুন',
     name: 'নাম',
@@ -130,7 +130,7 @@ const translations: Record<Language, Translations> = {
     notificationPrefs: 'বিজ্ঞপ্তি পছন্দ',
     privacySecurity: 'গোপনীয়তা এবং নিরাপত্তা',
     helpSupport: 'সাহায্য এবং সমর্থন',
-    aboutApp: 'হ্যান্ড-টু-হ্যান্ড সম্পর্কে'
+    aboutApp: 'HelpMate সম্পর্কে'
   },
   te: {
     home: 'హోమ్',
@@ -150,7 +150,7 @@ const translations: Record<Language, Translations> = {
     nearbyRequests: 'సమీప అభ్యర్థనలు',
     latestActivity: 'తాజా కార్యాచరణ',
     welcomeMessage: 'మీ దగ్గర ఉన్నది పంచుకోండి, మీకు కావాల్సింది పొందండి',
-    howItWorks: 'హ్యాండ్-టు-హ్యాండ్ ఎలా పనిచేస్తుంది',
+    howItWorks: 'HelpMate ఎలా పనిచేస్తుంది',
     accountSettings: 'ఖాతా సెట్టింగ్‌లు',
     saveChanges: 'మార్పులను సేవ్ చేయండి',
     name: 'పేరు',
@@ -162,7 +162,7 @@ const translations: Record<Language, Translations> = {
     notificationPrefs: 'నోటిఫికేషన్ ప్రాధాన్యతలు',
     privacySecurity: 'గోప్యత & భద్రత',
     helpSupport: 'సహాయం & మద్దతు',
-    aboutApp: 'హ్యాండ్-టు-హ్యాండ్ గురించి'
+    aboutApp: 'HelpMate గురించి'
   },
   mr: {
     home: 'होम',
@@ -182,7 +182,7 @@ const translations: Record<Language, Translations> = {
     nearbyRequests: 'जवळपासच्या विनंत्या',
     latestActivity: 'नवीनतम क्रियाकलाप',
     welcomeMessage: 'तुमच्याकडे जे आहे ते शेअर करा, तुम्हाला जे हवे ते मिळवा',
-    howItWorks: 'हँड-टू-हँड कसे काम करते',
+    howItWorks: 'HelpMate कसे काम करते',
     accountSettings: 'खाते सेटिंग्ज',
     saveChanges: 'बदल जतन करा',
     name: 'नाव',
@@ -194,7 +194,7 @@ const translations: Record<Language, Translations> = {
     notificationPrefs: 'सूचना प्राधान्ये',
     privacySecurity: 'गोपनीयता आणि सुरक्षा',
     helpSupport: 'मदत आणि समर्थन',
-    aboutApp: 'हँड-टू-हँड बद्दल'
+    aboutApp: 'HelpMate बद्दल'
   },
   ta: {
     home: 'முகப்பு',
@@ -214,7 +214,7 @@ const translations: Record<Language, Translations> = {
     nearbyRequests: 'அருகிலுள்ள கோரிக்கைகள்',
     latestActivity: 'சமீபத்திய செயல்பாடு',
     welcomeMessage: 'உங்களிடம் உள்ளதைப் பகிருங்கள், உங்களுக்குத் தேவையானதைப் பெறுங்கள்',
-    howItWorks: 'ஹேண்ட்-டு-ஹேண்ட் எவ்வாறு செயல்படுகிறது',
+    howItWorks: 'HelpMate எவ்வாறு செயல்படுகிறது',
     accountSettings: 'கணக்கு அமைப்புகள்',
     saveChanges: 'மாற்றங்களைச் சேமி',
     name: 'பெயர்',
@@ -226,7 +226,7 @@ const translations: Record<Language, Translations> = {
     notificationPrefs: 'அறிவிப்பு விருப்பத்தேர்வுகள்',
     privacySecurity: 'தனியுரிமை மற்றும் பாதுகாப்பு',
     helpSupport: 'உதவி மற்றும் ஆதரவு',
-    aboutApp: 'ஹேண்ட்-டு-ஹேண்ட் பற்றி'
+    aboutApp: 'HelpMate பற்றி'
   },
   gu: {
     home: 'હોમ',
@@ -246,7 +246,7 @@ const translations: Record<Language, Translations> = {
     nearbyRequests: 'નજીકની વિનંતીઓ',
     latestActivity: 'તાજેતરની પ્રવૃત્તિ',
     welcomeMessage: 'તમારી પાસે જે છે તે શેર કરો, તમને જે જોઈએ છે તે મેળવો',
-    howItWorks: 'હેન્ડ-ટુ-હેન્ડ કેવી રીતે કામ કરે છે',
+    howItWorks: 'HelpMate કેવી રીતે કામ કરે છે',
     accountSettings: 'એકાઉન્ટ સેટિંગ્સ',
     saveChanges: 'ફેરફારો સાચવો',
     name: 'નામ',
@@ -258,7 +258,7 @@ const translations: Record<Language, Translations> = {
     notificationPrefs: 'સૂચના પસંદગીઓ',
     privacySecurity: 'ગોપનીયતા અને સુરક્ષા',
     helpSupport: 'મદદ અને સપોર્ટ',
-    aboutApp: 'હેન્ડ-ટુ-હેન્ડ વિશે'
+    aboutApp: 'HelpMate વિશે'
   },
   kn: {
     home: 'ಮುಖಪುಟ',
@@ -278,7 +278,7 @@ const translations: Record<Language, Translations> = {
     nearbyRequests: 'ಹತ್ತಿರದ ವಿನಂತಿಗಳು',
     latestActivity: 'ಇತ್ತೀಚಿನ ಚಟುವಟಿಕೆ',
     welcomeMessage: 'ನಿಮ್ಮ ಬಳಿ ಇರುವುದನ್ನು ಹಂಚಿಕೊಳ್ಳಿ, ನಿಮಗೆ ಬೇಕಾದುದನ್ನು ಪಡೆಯಿರಿ',
-    howItWorks: 'ಹ್ಯಾಂಡ್-ಟು-ಹ್ಯಾಂಡ್ ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ',
+    howItWorks: 'HelpMate ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ',
     accountSettings: 'ಖಾತೆ ಸೆಟ್ಟಿಂಗ್‌ಗಳು',
     saveChanges: 'ಬದಲಾವಣೆಗಳನ್ನು ಉಳಿಸಿ',
     name: 'ಹೆಸರು',
@@ -290,7 +290,7 @@ const translations: Record<Language, Translations> = {
     notificationPrefs: 'ಅಧಿಸೂಚನೆ ಆದ್ಯತೆಗಳು',
     privacySecurity: 'ಗೌಪ್ಯತೆ ಮತ್ತು ಭದ್ರತೆ',
     helpSupport: 'ಸಹಾಯ ಮತ್ತು ಬೆಂಬಲ',
-    aboutApp: 'ಹ್ಯಾಂಡ್-ಟು-ಹ್ಯಾಂಡ್ ಬಗ್ಗೆ'
+    aboutApp: 'HelpMate ಬಗ್ಗೆ'
   }
 };
 

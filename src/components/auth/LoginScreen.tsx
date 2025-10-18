@@ -67,7 +67,7 @@ export default function LoginScreen({ onContinue }: LoginScreenProps) {
             <Heart className="w-9 h-9 text-white" fill="white" />
           </div>
         </div>
-        <h1 className="text-center text-gray-900 mb-2">Welcome to Hand2Hand</h1>
+        <h1 className="text-center text-gray-900 mb-2">Welcome to HelpMate</h1>
         <p className="text-center text-gray-600">Sign in or create an account to continue</p>
       </div>
 
@@ -138,7 +138,7 @@ export default function LoginScreen({ onContinue }: LoginScreenProps) {
 
         {/* Info text */}
         <p className="text-gray-500 mt-6 text-center">
-          Click verify to continue to Hand2Hand
+          Click verify to continue to HelpMate
         </p>
       </div>
 

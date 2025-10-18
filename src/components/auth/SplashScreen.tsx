@@ -16,7 +16,7 @@ export default function SplashScreen() {
         </div>
         
         {/* App Name */}
-        <h1 className="text-white text-4xl tracking-tight">Hand2Hand</h1>
+        <h1 className="text-white text-4xl tracking-tight">HelpMate</h1>
         <p className="text-[#8b92b8] mt-2">Help is just a hand away</p>
       </motion.div>
     </div>
