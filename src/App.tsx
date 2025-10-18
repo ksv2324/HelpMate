@@ -18,16 +18,13 @@ export default function App() {
   return (
     <LanguageProvider>
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        {/* Mobile frame */}
-        <div className="w-full max-w-md h-[844px] bg-white shadow-2xl rounded-[3rem] overflow-hidden relative">
-          {/* Screen content */}
-          <div className="h-full overflow-hidden">
-            {currentScreen === 'splash' && <SplashScreen />}
-            {currentScreen === 'onboarding' && <OnboardingScreen onComplete={() => setCurrentScreen('login')} />}
-            {currentScreen === 'login' && <LoginScreen onContinue={(phone) => { setUserPhone(phone); setCurrentScreen('pledge'); }} />}
-            {currentScreen === 'pledge' && <PledgeScreen onAccept={() => setCurrentScreen('main')} />}
-            {currentScreen === 'main' && <MainApp userPhone={userPhone} />}
-          </div>
+        {/* Screen content */}
+        <div className="h-full overflow-hidden">
+          {currentScreen === 'splash' && <SplashScreen />}
+          {currentScreen === 'onboarding' && <OnboardingScreen onComplete={() => setCurrentScreen('login')} />}
+          {currentScreen === 'login' && <LoginScreen onContinue={(phone) => { setUserPhone(phone); setCurrentScreen('pledge'); }} />}
+          {currentScreen === 'pledge' && <PledgeScreen onAccept={() => setCurrentScreen('main')} />}
+          {currentScreen === 'main' && <MainApp userPhone={userPhone} />}
         </div>
       </div>
     </LanguageProvider>
