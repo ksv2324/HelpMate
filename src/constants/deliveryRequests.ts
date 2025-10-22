@@ -1,0 +1,123 @@
+import { DeliveryRequest } from '../types';
+
+export const availableDeliveries: DeliveryRequest[] = [
+  {
+    id: 'del-1',
+    donationId: 'don-1',
+    donationTitle: 'Winter Clothes Collection',
+    donationImage: 'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=400',
+    donor: 'Sarah Johnson',
+    donorLocation: 'Downtown Community Center',
+    donorCoordinates: [28.6139, 77.2090],
+    recipient: 'Helping Hands Shelter',
+    recipientLocation: 'North Delhi Shelter',
+    recipientCoordinates: [28.7041, 77.1025],
+    distance: '8.5 km',
+    description: 'Need volunteer to deliver winter clothes to shelter. Items are packed and ready for pickup.',
+    status: 'pending',
+    estimatedDeliveryTime: '1-2 hours'
+  },
+  {
+    id: 'del-2',
+    donationId: 'don-2',
+    donationTitle: 'Food Packages',
+    donationImage: 'https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=400',
+    donor: 'Community Kitchen',
+    donorLocation: 'Central Market Area',
+    donorCoordinates: [28.6304, 77.2177],
+    recipient: 'Elder Care Home',
+    recipientLocation: 'South Delhi Care Center',
+    recipientCoordinates: [28.5355, 77.2500],
+    distance: '12 km',
+    description: 'Fresh meal packages need to be delivered today. Temperature-controlled transport preferred.',
+    status: 'pending',
+    estimatedDeliveryTime: '2-3 hours'
+  },
+  {
+    id: 'del-3',
+    donationId: 'don-3',
+    donationTitle: 'School Supplies',
+    donationImage: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400',
+    donor: 'Raj Sharma',
+    donorLocation: 'Vasant Vihar',
+    donorCoordinates: [28.5672, 77.1567],
+    recipient: 'Rural Education Trust',
+    recipientLocation: 'Gurgaon Learning Center',
+    recipientCoordinates: [28.4595, 77.0266],
+    distance: '18 km',
+    description: 'Books, stationery, and art supplies for underprivileged children. 3 boxes total.',
+    status: 'pending',
+    estimatedDeliveryTime: '2-3 hours'
+  },
+  {
+    id: 'del-4',
+    donationId: 'don-4',
+    donationTitle: 'Medical Supplies',
+    donationImage: 'https://images.unsplash.com/photo-1584362917165-526a968579e8?w=400',
+    donor: 'Care Plus Pharmacy',
+    donorLocation: 'Rohini Sector 8',
+    donorCoordinates: [28.7479, 77.1111],
+    recipient: 'Mobile Health Clinic',
+    recipientLocation: 'Dwarka Health Camp',
+    recipientCoordinates: [28.5921, 77.0460],
+    distance: '15 km',
+    description: 'First aid kits and basic medicines for health camp. Urgent delivery needed.',
+    status: 'pending',
+    estimatedDeliveryTime: '1-2 hours'
+  },
+  {
+    id: 'del-5',
+    donationId: 'don-5',
+    donationTitle: 'Baby Care Items',
+    donationImage: 'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=400',
+    donor: 'Priya Mehta',
+    donorLocation: 'Greater Kailash',
+    donorCoordinates: [28.5494, 77.2426],
+    recipient: 'Mother & Child Center',
+    recipientLocation: 'Lajpat Nagar Center',
+    recipientCoordinates: [28.5677, 77.2436],
+    distance: '3 km',
+    description: 'Diapers, baby formula, and clothing. Small package, easy delivery.',
+    status: 'pending',
+    estimatedDeliveryTime: '30 mins - 1 hour'
+  }
+];
+
+export const myDeliveries: DeliveryRequest[] = [
+  {
+    id: 'del-6',
+    donationId: 'don-6',
+    donationTitle: 'Electronics & Gadgets',
+    donationImage: 'https://images.unsplash.com/photo-1498049794561-7780e7231661?w=400',
+    donor: 'Tech Donors Inc',
+    donorLocation: 'Cyber Hub, Gurgaon',
+    donorCoordinates: [28.4950, 77.0890],
+    recipient: 'Digital Learning Lab',
+    recipientLocation: 'Saket Computer Center',
+    recipientCoordinates: [28.5244, 77.2066],
+    distance: '20 km',
+    description: 'Laptops and tablets for student learning center.',
+    status: 'accepted',
+    acceptedBy: 'You',
+    acceptedAt: '2 hours ago',
+    estimatedDeliveryTime: '3-4 hours'
+  },
+  {
+    id: 'del-7',
+    donationId: 'don-7',
+    donationTitle: 'Furniture Items',
+    donationImage: 'https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=400',
+    donor: 'Home Decor Store',
+    donorLocation: 'Nehru Place',
+    donorCoordinates: [28.5494, 77.2501],
+    recipient: 'New Start Homes',
+    recipientLocation: 'Mayur Vihar Housing',
+    recipientCoordinates: [28.6080, 77.2960],
+    distance: '9 km',
+    description: 'Tables, chairs, and shelving units for refugee housing project.',
+    status: 'in-progress',
+    acceptedBy: 'You',
+    acceptedAt: '1 day ago',
+    estimatedDeliveryTime: '4-5 hours'
+  }
+];

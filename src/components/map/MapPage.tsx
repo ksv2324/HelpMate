@@ -4,26 +4,44 @@ import { Button } from '../ui/button';
 import { Badge } from '../ui/badge';
 import { ChatBox } from '../chat';
 import { useLanguage } from '../shared/LanguageContext';
+import { ScreenContainer } from '../shared';
+import LeafletMap, { MapMarker } from './LeafletMap';
 
-const mapMarkers = [
-  { id: '1', x: 35, y: 45, type: 'donation', title: 'Fresh Vegetables', user: 'Priya Sharma', distance: '0.8 km' },
-  { id: '2', x: 60, y: 30, type: 'request', title: 'Warm Blankets', user: 'Ravi Kumar', distance: '0.5 km' },
-  { id: '3', x: 25, y: 65, type: 'donation', title: 'Winter Clothes', user: '', distance: '1.2 km' },
-  { id: '4', x: 70, y: 55, type: 'request', title: 'School Books', user: '', distance: '1.1 km' },
-  { id: '5', x: 45, y: 40, type: 'donation', title: 'Home-Cooked Meals', user: 'Anjali Patel', distance: '1.5 km' },
-  { id: '6', x: 55, y: 70, type: 'request', title: 'Rice & Groceries', user: 'Lakshmi Reddy', distance: '1.4 km' },
+// Bangalore coordinates (Koramangala area)
+const BANGALORE_CENTER: [number, number] = [12.9352, 77.6245];
+
+// Convert markers to use real coordinates near Bangalore
+const mapMarkers: MapMarker[] = [
+  { id: '1', lat: 12.9365, lng: 77.6278, type: 'donation', title: 'Fresh Vegetables', user: 'Priya Sharma', distance: '0.8 km' },
+  { id: '2', lat: 12.9385, lng: 77.6210, type: 'request', title: 'Warm Blankets', user: 'Ravi Kumar', distance: '0.5 km' },
+  { id: '3', lat: 12.9320, lng: 77.6300, type: 'donation', title: 'Winter Clothes', user: '', distance: '1.2 km' },
+  { id: '4', lat: 12.9390, lng: 77.6275, type: 'request', title: 'School Books', user: '', distance: '1.1 km' },
+  { id: '5', lat: 12.9355, lng: 77.6235, type: 'donation', title: 'Home-Cooked Meals', user: 'Anjali Patel', distance: '1.5 km' },
+  { id: '6', lat: 12.9340, lng: 77.6290, type: 'request', title: 'Rice & Groceries', user: 'Lakshmi Reddy', distance: '1.4 km' },
 ];
 
 export default function MapPage() {
-  const [selectedMarker, setSelectedMarker] = useState<typeof mapMarkers[0] | null>(null);
+  const [selectedMarker, setSelectedMarker] = useState<MapMarker | null>(null);
   const [acceptedMarkers, setAcceptedMarkers] = useState<Set<string>>(new Set());
-  const [chatMarker, setChatMarker] = useState<typeof mapMarkers[0] | null>(null);
+  const [chatMarker, setChatMarker] = useState<MapMarker | null>(null);
+  const [mapCenter] = useState<[number, number]>(BANGALORE_CENTER);
+  const [mapZoom] = useState(15);
   const { t } = useLanguage();
 
-  const handleAccept = (marker: typeof mapMarkers[0]) => {
+  const handleAccept = (marker: MapMarker) => {
     setAcceptedMarkers(new Set([...acceptedMarkers, marker.id]));
     setChatMarker(marker);
     setSelectedMarker(null);
+  };
+
+  const handleMarkerClick = (marker: MapMarker) => {
+    setSelectedMarker(marker);
+  };
+
+  const handleRecenterMap = () => {
+    // In a real app, this would get the user's current location
+    // For now, we'll just reset to center
+    window.location.reload();
   };
 
   if (chatMarker) {
@@ -46,30 +64,19 @@ export default function MapPage() {
   }
 
   return (
-    <div className="h-full bg-white relative">
-      {/* Map Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200">
-        {/* Grid pattern */}
-        <svg className="w-full h-full" style={{ opacity: 0.3 }}>
-          <defs>
-            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="gray" strokeWidth="0.5"/>
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#grid)" />
-        </svg>
-        
-        {/* Streets */}
-        <svg className="absolute inset-0 w-full h-full" style={{ opacity: 0.4 }}>
-          <line x1="0" y1="40%" x2="100%" y2="40%" stroke="#999" strokeWidth="3" />
-          <line x1="0" y1="70%" x2="100%" y2="70%" stroke="#999" strokeWidth="2" />
-          <line x1="30%" y1="0" x2="30%" y2="100%" stroke="#999" strokeWidth="3" />
-          <line x1="65%" y1="0" x2="65%" y2="100%" stroke="#999" strokeWidth="2" />
-        </svg>
+    <ScreenContainer>
+      {/* Leaflet Map */}
+      <div className="absolute inset-0 z-0">
+        <LeafletMap
+          markers={mapMarkers}
+          center={mapCenter}
+          zoom={mapZoom}
+          onMarkerClick={handleMarkerClick}
+        />
       </div>
 
       {/* Legend */}
-      <div className="absolute top-4 right-4 bg-white rounded-xl p-3 shadow-lg z-10">
+      <div className="absolute top-4 right-4 bg-white rounded-xl p-3 shadow-lg z-10 min-w-[120px] shrink-0">
         <p className="text-gray-900 mb-2">Legend</p>
         <div className="space-y-2">
           <div className="flex items-center gap-2">
@@ -84,51 +91,21 @@ export default function MapPage() {
       </div>
 
       {/* Radius Info */}
-      <div className="absolute top-4 left-4 bg-white rounded-xl px-4 py-2 shadow-lg z-10">
+      <div className="absolute top-4 left-4 bg-white rounded-xl px-4 py-2 shadow-lg z-10 min-w-[140px] shrink-0">
         <p className="text-gray-900">Within 2 km radius</p>
       </div>
 
       {/* Current Location Button */}
-      <button className="absolute bottom-24 right-4 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors z-10">
+      <button 
+        onClick={handleRecenterMap}
+        className="absolute bottom-24 right-4 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors z-10"
+      >
         <Navigation className="w-6 h-6 text-[#4c6ef5]" />
       </button>
 
-      {/* Map Markers */}
-      {mapMarkers.map((marker) => (
-        <button
-          key={marker.id}
-          onClick={() => setSelectedMarker(marker)}
-          className="absolute transform -translate-x-1/2 -translate-y-full hover:scale-110 transition-transform z-20"
-          style={{ left: `${marker.x}%`, top: `${marker.y}%` }}
-        >
-          <div className="relative">
-            <div className={`w-10 h-10 rounded-full shadow-lg flex items-center justify-center ${
-              marker.type === 'donation' ? 'bg-[#4c6ef5]' : 'bg-green-600'
-            }`}>
-              {marker.type === 'donation' ? (
-                <Heart className="w-5 h-5 text-white" fill="white" />
-              ) : (
-                <Gift className="w-5 h-5 text-white" fill="white" />
-              )}
-            </div>
-            <div className={`w-1 h-3 mx-auto ${
-              marker.type === 'donation' ? 'bg-[#4c6ef5]' : 'bg-green-600'
-            }`} />
-          </div>
-        </button>
-      ))}
-
-      {/* Current location */}
-      <div className="absolute z-20" style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}>
-        <div className="relative">
-          <div className="w-4 h-4 bg-blue-600 rounded-full border-2 border-white shadow-lg" />
-          <div className="absolute inset-0 w-4 h-4 bg-blue-600 rounded-full animate-ping opacity-75" />
-        </div>
-      </div>
-
       {/* Selected Marker Overlay */}
       {selectedMarker && (
-        <div className="absolute bottom-0 left-0 right-0 bg-white rounded-t-3xl shadow-2xl p-5 border-t border-gray-200 z-30 animate-in slide-in-from-bottom">
+        <div className="absolute bottom-0 left-0 right-0 bg-white rounded-t-3xl shadow-2xl p-5 border-t border-gray-200 z-30 animate-in slide-in-from-bottom min-w-0">
           <div className="w-12 h-1 bg-gray-300 rounded-full mx-auto mb-4" />
           
           <div className="flex items-start justify-between mb-4">
@@ -204,6 +181,6 @@ export default function MapPage() {
           </div>
         </div>
       )}
-    </div>
+    </ScreenContainer>
   );
 }

@@ -6,6 +6,7 @@ interface Translations {
   home: string;
   donation: string;
   request: string;
+  volunteer: string;
   map: string;
   profile: string;
   notifications: string;
@@ -33,6 +34,34 @@ interface Translations {
   privacySecurity: string;
   helpSupport: string;
   aboutApp: string;
+  // Volunteer translations
+  available: string;
+  myDeliveries: string;
+  availableDeliveries: string;
+  deliveriesNeedHelp: string;
+  noDeliveries: string;
+  checkBackLater: string;
+  deliveryDetails: string;
+  pickupFrom: string;
+  deliverTo: string;
+  distance: string;
+  estimatedTime: string;
+  acceptDelivery: string;
+  back: string;
+  activeDeliveries: string;
+  noActiveDeliveries: string;
+  acceptDeliveriesToSee: string;
+  accepted: string;
+  inProgress: string;
+  completed: string;
+  navigation: string;
+  call: string;
+  message: string;
+  startDelivery: string;
+  viewMap: string;
+  acceptedAt: string;
+  callDonor: string;
+  callRecipient: string;
 }
 
 const translations: Record<Language, Translations> = {
@@ -40,6 +69,7 @@ const translations: Record<Language, Translations> = {
     home: 'Home',
     donation: 'Donation',
     request: 'Request',
+    volunteer: 'Volunteer',
     map: 'Map',
     profile: 'Profile',
     notifications: 'Notifications',
@@ -66,12 +96,40 @@ const translations: Record<Language, Translations> = {
     notificationPrefs: 'Notification Preferences',
     privacySecurity: 'Privacy & Security',
     helpSupport: 'Help & Support',
-    aboutApp: 'About HelpMate'
+    aboutApp: 'About HelpMate',
+    available: 'Available',
+    myDeliveries: 'My Deliveries',
+    availableDeliveries: 'Available Deliveries',
+    deliveriesNeedHelp: 'deliveries need your help',
+    noDeliveries: 'No Deliveries Available',
+    checkBackLater: 'Check back later for new delivery requests',
+    deliveryDetails: 'Delivery Details',
+    pickupFrom: 'Pickup From',
+    deliverTo: 'Deliver To',
+    distance: 'Distance',
+    estimatedTime: 'Est. Time',
+    acceptDelivery: 'Accept Delivery',
+    back: 'Back',
+    activeDeliveries: 'active deliveries',
+    noActiveDeliveries: 'No Active Deliveries',
+    acceptDeliveriesToSee: 'Accept deliveries to see them here',
+    accepted: 'Accepted',
+    inProgress: 'In Progress',
+    completed: 'Completed',
+    navigation: 'Navigation',
+    call: 'Call',
+    message: 'Message',
+    startDelivery: 'Start Delivery',
+    viewMap: 'View Map',
+    acceptedAt: 'Accepted',
+    callDonor: 'Call Donor',
+    callRecipient: 'Call Recipient'
   },
   hi: {
     home: 'होम',
     donation: 'दान',
     request: 'अनुरोध',
+    volunteer: 'स्वयंसेवक',
     map: 'नक्शा',
     profile: 'प्रोफ़ाइल',
     notifications: 'सूचनाएं',
@@ -98,12 +156,40 @@ const translations: Record<Language, Translations> = {
     notificationPrefs: 'सूचना प्राथमिकताएं',
     privacySecurity: 'गोपनीयता और सुरक्षा',
     helpSupport: 'सहायता और समर्थन',
-    aboutApp: 'HelpMate के बारे में'
+    aboutApp: 'HelpMate के बारे में',
+    available: 'उपलब्ध',
+    myDeliveries: 'मेरी डिलीवरी',
+    availableDeliveries: 'उपलब्ध डिलीवरी',
+    deliveriesNeedHelp: 'डिलीवरी में आपकी मदद चाहिए',
+    noDeliveries: 'कोई डिलीवरी उपलब्ध नहीं',
+    checkBackLater: 'नई डिलीवरी अनुरोधों के लिए बाद में जांचें',
+    deliveryDetails: 'डिलीवरी विवरण',
+    pickupFrom: 'से पिकअप',
+    deliverTo: 'को पहुंचाएं',
+    distance: 'दूरी',
+    estimatedTime: 'अनुमानित समय',
+    acceptDelivery: 'डिलीवरी स्वीकार करें',
+    back: 'वापस',
+    activeDeliveries: 'सक्रिय डिलीवरी',
+    noActiveDeliveries: 'कोई सक्रिय डिलीवरी नहीं',
+    acceptDeliveriesToSee: 'उन्हें यहां देखने के लिए डिलीवरी स्वीकार करें',
+    accepted: 'स्वीकृत',
+    inProgress: 'प्रगति में',
+    completed: 'पूर्ण',
+    navigation: 'नेविगेशन',
+    call: 'कॉल',
+    message: 'संदेश',
+    startDelivery: 'डिलीवरी शुरू करें',
+    viewMap: 'मानचित्र देखें',
+    acceptedAt: 'स्वीकृत',
+    callDonor: 'दाता को कॉल करें',
+    callRecipient: 'प्राप्तकर्ता को कॉल करें'
   },
   bn: {
     home: 'হোম',
     donation: 'দান',
     request: 'অনুরোধ',
+    volunteer: 'স্বেচ্ছাসেবক',
     map: 'মানচিত্র',
     profile: 'প্রোফাইল',
     notifications: 'বিজ্ঞপ্তি',
@@ -130,12 +216,40 @@ const translations: Record<Language, Translations> = {
     notificationPrefs: 'বিজ্ঞপ্তি পছন্দ',
     privacySecurity: 'গোপনীয়তা এবং নিরাপত্তা',
     helpSupport: 'সাহায্য এবং সমর্থন',
-    aboutApp: 'HelpMate সম্পর্কে'
+    aboutApp: 'HelpMate সম্পর্কে',
+    available: 'উপলব্ধ',
+    myDeliveries: 'আমার ডেলিভারি',
+    availableDeliveries: 'উপলব্ধ ডেলিভারি',
+    deliveriesNeedHelp: 'ডেলিভারিতে আপনার সাহায্য দরকার',
+    noDeliveries: 'কোন ডেলিভারি উপলব্ধ নেই',
+    checkBackLater: 'নতুন ডেলিভারি অনুরোধের জন্য পরে চেক করুন',
+    deliveryDetails: 'ডেলিভারি বিবরণ',
+    pickupFrom: 'থেকে পিকআপ',
+    deliverTo: 'এ পৌঁছান',
+    distance: 'দূরত্ব',
+    estimatedTime: 'আনুমানিক সময়',
+    acceptDelivery: 'ডেলিভারি গ্রহণ করুন',
+    back: 'ফিরে যান',
+    activeDeliveries: 'সক্রিয় ডেলিভারি',
+    noActiveDeliveries: 'কোন সক্রিয় ডেলিভারি নেই',
+    acceptDeliveriesToSee: 'এখানে দেখতে ডেলিভারি গ্রহণ করুন',
+    accepted: 'গৃহীত',
+    inProgress: 'চলমান',
+    completed: 'সম্পন্ন',
+    navigation: 'নেভিগেশন',
+    call: 'কল',
+    message: 'বার্তা',
+    startDelivery: 'ডেলিভারি শুরু করুন',
+    viewMap: 'মানচিত্র দেখুন',
+    acceptedAt: 'গৃহীত',
+    callDonor: 'দাতাকে কল করুন',
+    callRecipient: 'প্রাপককে কল করুন'
   },
   te: {
     home: 'హోమ్',
     donation: 'దానం',
     request: 'అభ్యర్థన',
+    volunteer: 'స్వచ్చంద సేవకుడు',
     map: 'మ్యాప్',
     profile: 'ప్రొఫైల్',
     notifications: 'నోటిఫికేషన్లు',
@@ -162,12 +276,40 @@ const translations: Record<Language, Translations> = {
     notificationPrefs: 'నోటిఫికేషన్ ప్రాధాన్యతలు',
     privacySecurity: 'గోప్యత & భద్రత',
     helpSupport: 'సహాయం & మద్దతు',
-    aboutApp: 'HelpMate గురించి'
+    aboutApp: 'HelpMate గురించి',
+    available: 'అందుబాటులో',
+    myDeliveries: 'నా డెలివరీలు',
+    availableDeliveries: 'అందుబాటులో ఉన్న డెలివరీలు',
+    deliveriesNeedHelp: 'డెలివరీలకు మీ సహాయం అవసరం',
+    noDeliveries: 'డెలివరీలు అందుబాటులో లేవు',
+    checkBackLater: 'కొత్త డెలివరీ అభ్యర్థనల కోసం తర్వాత తనిఖీ చేయండి',
+    deliveryDetails: 'డెలివరీ వివరాలు',
+    pickupFrom: 'నుండి పికప్',
+    deliverTo: 'కు పంపించండి',
+    distance: 'దూరం',
+    estimatedTime: 'అంచనా సమయం',
+    acceptDelivery: 'డెలివరీని అంగీకరించండి',
+    back: 'వెనుకకు',
+    activeDeliveries: 'క్రియాశీల డెలివరీలు',
+    noActiveDeliveries: 'క్రియాశీల డెలివరీలు లేవు',
+    acceptDeliveriesToSee: 'వాటిని ఇక్కడ చూడటానికి డెలివరీలను అంగీకరించండి',
+    accepted: 'అంగీకరించబడింది',
+    inProgress: 'పురోగతిలో',
+    completed: 'పూర్తయింది',
+    navigation: 'నావిగేషన్',
+    call: 'కాల్',
+    message: 'సందేశం',
+    startDelivery: 'డెలివరీ ప్రారంభించండి',
+    viewMap: 'మ్యాప్ చూడండి',
+    acceptedAt: 'అంగీకరించబడింది',
+    callDonor: 'దాతను కాల్ చేయండి',
+    callRecipient: 'స్వీకరించేవారికి కాల్ చేయండి'
   },
   mr: {
     home: 'होम',
     donation: 'देणगी',
     request: 'विनंती',
+    volunteer: 'स्वयंसेवक',
     map: 'नकाशा',
     profile: 'प्रोफाईल',
     notifications: 'सूचना',
@@ -194,12 +336,40 @@ const translations: Record<Language, Translations> = {
     notificationPrefs: 'सूचना प्राधान्ये',
     privacySecurity: 'गोपनीयता आणि सुरक्षा',
     helpSupport: 'मदत आणि समर्थन',
-    aboutApp: 'HelpMate बद्दल'
+    aboutApp: 'HelpMate बद्दल',
+    available: 'उपलब्ध',
+    myDeliveries: 'माझी डिलिव्हरी',
+    availableDeliveries: 'उपलब्ध डिलिव्हरी',
+    deliveriesNeedHelp: 'डिलिव्हरीला तुमची मदत हवी आहे',
+    noDeliveries: 'कोणतीही डिलिव्हरी उपलब्ध नाही',
+    checkBackLater: 'नवीन डिलिव्हरी विनंत्यांसाठी नंतर तपासा',
+    deliveryDetails: 'डिलिव्हरी तपशील',
+    pickupFrom: 'येथून पिकअप',
+    deliverTo: 'येथे पोहोचवा',
+    distance: 'अंतर',
+    estimatedTime: 'अंदाजे वेळ',
+    acceptDelivery: 'डिलिव्हरी स्वीकारा',
+    back: 'परत',
+    activeDeliveries: 'सक्रिय डिलिव्हरी',
+    noActiveDeliveries: 'कोणतीही सक्रिय डिलिव्हरी नाही',
+    acceptDeliveriesToSee: 'येथे पाहण्यासाठी डिलिव्हरी स्वीकारा',
+    accepted: 'स्वीकारले',
+    inProgress: 'प्रगतीपथावर',
+    completed: 'पूर्ण झाले',
+    navigation: 'नेव्हिगेशन',
+    call: 'कॉल',
+    message: 'संदेश',
+    startDelivery: 'डिलिव्हरी सुरू करा',
+    viewMap: 'नकाशा पहा',
+    acceptedAt: 'स्वीकारले',
+    callDonor: 'दात्याला कॉल करा',
+    callRecipient: 'प्राप्तकर्त्याला कॉल करा'
   },
   ta: {
     home: 'முகப்பு',
     donation: 'நன்கொடை',
     request: 'கோரிக்கை',
+    volunteer: 'தன்னார்வலர்',
     map: 'வரைபடம்',
     profile: 'சுயவிவரம்',
     notifications: 'அறிவிப்புகள்',
@@ -226,12 +396,40 @@ const translations: Record<Language, Translations> = {
     notificationPrefs: 'அறிவிப்பு விருப்பத்தேர்வுகள்',
     privacySecurity: 'தனியுரிமை மற்றும் பாதுகாப்பு',
     helpSupport: 'உதவி மற்றும் ஆதரவு',
-    aboutApp: 'HelpMate பற்றி'
+    aboutApp: 'HelpMate பற்றி',
+    available: 'கிடைக்கும்',
+    myDeliveries: 'என் விநியோகங்கள்',
+    availableDeliveries: 'கிடைக்கும் விநியோகங்கள்',
+    deliveriesNeedHelp: 'விநியோகங்களுக்கு உங்கள் உதவி தேவை',
+    noDeliveries: 'விநியோகங்கள் இல்லை',
+    checkBackLater: 'புதிய விநியோக கோரிக்கைகளுக்கு பின்னர் சரிபார்க்கவும்',
+    deliveryDetails: 'விநியோக விவரங்கள்',
+    pickupFrom: 'இருந்து எடு',
+    deliverTo: 'க்கு வழங்கு',
+    distance: 'தூரம்',
+    estimatedTime: 'மதிப்பிடப்பட்ட நேரம்',
+    acceptDelivery: 'விநியோகத்தை ஏற்கவும்',
+    back: 'பின்',
+    activeDeliveries: 'செயலில் உள்ள விநியோகங்கள்',
+    noActiveDeliveries: 'செயலில் உள்ள விநியோகங்கள் இல்லை',
+    acceptDeliveriesToSee: 'இங்கே பார்க்க விநியோகங்களை ஏற்கவும்',
+    accepted: 'ஏற்கப்பட்டது',
+    inProgress: 'நடைபெறுகிறது',
+    completed: 'முடிந்தது',
+    navigation: 'வழிசெலுத்தல்',
+    call: 'அழை',
+    message: 'செய்தி',
+    startDelivery: 'விநியோகத்தைத் தொடங்கு',
+    viewMap: 'வரைபடத்தைக் காண்க',
+    acceptedAt: 'ஏற்கப்பட்டது',
+    callDonor: 'நன்கொடையாளரை அழைக்கவும்',
+    callRecipient: 'பெறுநரை அழைக்கவும்'
   },
   gu: {
     home: 'હોમ',
     donation: 'દાન',
     request: 'વિનંતી',
+    volunteer: 'સ્વયંસેવક',
     map: 'નકશો',
     profile: 'પ્રોફાઇલ',
     notifications: 'સૂચનાઓ',
@@ -258,12 +456,40 @@ const translations: Record<Language, Translations> = {
     notificationPrefs: 'સૂચના પસંદગીઓ',
     privacySecurity: 'ગોપનીયતા અને સુરક્ષા',
     helpSupport: 'મદદ અને સપોર્ટ',
-    aboutApp: 'HelpMate વિશે'
+    aboutApp: 'HelpMate વિશે',
+    available: 'ઉપલબ્ધ',
+    myDeliveries: 'મારી ડિલિવરીઓ',
+    availableDeliveries: 'ઉપલબ્ધ ડિલિવરીઓ',
+    deliveriesNeedHelp: 'ડિલિવરીઓને તમારી મદદની જરૂર છે',
+    noDeliveries: 'કોઈ ડિલિવરી ઉપલબ્ધ નથી',
+    checkBackLater: 'નવી ડિલિવરી વિનંતીઓ માટે પછીથી તપાસો',
+    deliveryDetails: 'ડિલિવરી વિગતો',
+    pickupFrom: 'થી પિકઅપ',
+    deliverTo: 'ને પહોંચાડો',
+    distance: 'અંતર',
+    estimatedTime: 'અંદાજિત સમય',
+    acceptDelivery: 'ડિલિવરી સ્વીકારો',
+    back: 'પાછળ',
+    activeDeliveries: 'સક્રિય ડિલિવરીઓ',
+    noActiveDeliveries: 'કોઈ સક્રિય ડિલિવરીઓ નથી',
+    acceptDeliveriesToSee: 'તેમને અહીં જોવા માટે ડિલિવરીઓ સ્વીકારો',
+    accepted: 'સ્વીકૃત',
+    inProgress: 'પ્રગતિમાં',
+    completed: 'પૂર્ણ',
+    navigation: 'નેવિગેશન',
+    call: 'કૉલ',
+    message: 'સંદેશ',
+    startDelivery: 'ડિલિવરી શરૂ કરો',
+    viewMap: 'નકશો જુઓ',
+    acceptedAt: 'સ્વીકૃત',
+    callDonor: 'દાતાને કૉલ કરો',
+    callRecipient: 'પ્રાપ્તકર્તાને કૉલ કરો'
   },
   kn: {
     home: 'ಮುಖಪುಟ',
     donation: 'ದಾನ',
     request: 'ವಿನಂತಿ',
+    volunteer: 'ಸ್ವಯಂಸೇವಕ',
     map: 'ನಕ್ಷೆ',
     profile: 'ಪ್ರೊಫೈಲ್',
     notifications: 'ಅಧಿಸೂಚನೆಗಳು',
@@ -290,7 +516,34 @@ const translations: Record<Language, Translations> = {
     notificationPrefs: 'ಅಧಿಸೂಚನೆ ಆದ್ಯತೆಗಳು',
     privacySecurity: 'ಗೌಪ್ಯತೆ ಮತ್ತು ಭದ್ರತೆ',
     helpSupport: 'ಸಹಾಯ ಮತ್ತು ಬೆಂಬಲ',
-    aboutApp: 'HelpMate ಬಗ್ಗೆ'
+    aboutApp: 'HelpMate ಬಗ್ಗೆ',
+    available: 'ಲಭ್ಯವಿದೆ',
+    myDeliveries: 'ನನ್ನ ವಿತರಣೆಗಳು',
+    availableDeliveries: 'ಲಭ್ಯವಿರುವ ವಿತರಣೆಗಳು',
+    deliveriesNeedHelp: 'ವಿತರಣೆಗಳಿಗೆ ನಿಮ್ಮ ಸಹಾಯ ಬೇಕು',
+    noDeliveries: 'ಯಾವುದೇ ವಿತರಣೆಗಳು ಲಭ್ಯವಿಲ್ಲ',
+    checkBackLater: 'ಹೊಸ ವಿತರಣಾ ವಿನಂತಿಗಳಿಗಾಗಿ ನಂತರ ಪರಿಶೀಲಿಸಿ',
+    deliveryDetails: 'ವಿತರಣಾ ವಿವರಗಳು',
+    pickupFrom: 'ನಿಂದ ಪಿಕಪ್',
+    deliverTo: 'ಗೆ ವಿತರಿಸಿ',
+    distance: 'ದೂರ',
+    estimatedTime: 'ಅಂದಾಜು ಸಮಯ',
+    acceptDelivery: 'ವಿತರಣೆಯನ್ನು ಸ್ವೀಕರಿಸಿ',
+    back: 'ಹಿಂದೆ',
+    activeDeliveries: 'ಸಕ್ರಿಯ ವಿತರಣೆಗಳು',
+    noActiveDeliveries: 'ಸಕ್ರಿಯ ವಿತರಣೆಗಳಿಲ್ಲ',
+    acceptDeliveriesToSee: 'ಅವುಗಳನ್ನು ಇಲ್ಲಿ ನೋಡಲು ವಿತರಣೆಗಳನ್ನು ಸ್ವೀಕರಿಸಿ',
+    accepted: 'ಸ್ವೀಕರಿಸಲಾಗಿದೆ',
+    inProgress: 'ಪ್ರಗತಿಯಲ್ಲಿದೆ',
+    completed: 'ಪೂರ್ಣಗೊಂಡಿದೆ',
+    navigation: 'ನ್ಯಾವಿಗೇಶನ್',
+    call: 'ಕರೆ',
+    message: 'ಸಂದೇಶ',
+    startDelivery: 'ವಿತರಣೆ ಪ್ರಾರಂಭಿಸಿ',
+    viewMap: 'ನಕ್ಷೆಯನ್ನು ವೀಕ್ಷಿಸಿ',
+    acceptedAt: 'ಸ್ವೀಕರಿಸಲಾಗಿದೆ',
+    callDonor: 'ದಾನಿಗೆ ಕರೆ ಮಾಡಿ',
+    callRecipient: 'ಸ್ವೀಕರಿಸುವವರಿಗೆ ಕರೆ ಮಾಡಿ'
   }
 };
 

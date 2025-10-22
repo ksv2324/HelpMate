@@ -2,3 +2,4 @@
 export { default as HelpMateLogo } from './HelpMateLogo';
 export { default as MainApp } from './MainApp';
 export { LanguageProvider, useLanguage } from './LanguageContext';
+export { default as ScreenContainer } from './ScreenContainer';

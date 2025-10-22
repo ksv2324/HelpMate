@@ -18,6 +18,27 @@ export interface Request {
   description: string;
 }
 
+export type DeliveryStatus = 'pending' | 'accepted' | 'in-progress' | 'completed';
+
+export interface DeliveryRequest {
+  id: string;
+  donationId: string;
+  donationTitle: string;
+  donationImage: string;
+  donor: string;
+  donorLocation: string;
+  donorCoordinates: [number, number];
+  recipient: string;
+  recipientLocation: string;
+  recipientCoordinates: [number, number];
+  distance: string;
+  description: string;
+  status: DeliveryStatus;
+  acceptedBy?: string;
+  acceptedAt?: string;
+  estimatedDeliveryTime?: string;
+}
+
 export interface Message {
   id: string;
   sender: 'me' | 'them';
@@ -43,7 +64,8 @@ export interface UserProfile {
   bio: string;
 }
 
-export type Tab = 'home' | 'donation' | 'request' | 'map';
+export type Tab = 'home' | 'donation' | 'request' | 'volunteer' | 'map';
+export type VolunteerSubTab = 'available' | 'myDeliveries';
 export type SettingsScreen = 'profile' | 'notif-prefs' | 'privacy' | 'help' | 'about';
 export type AuthScreen = 'splash' | 'onboarding' | 'language' | 'userDetails' | 'aadhar' | 'otp' | 'role' | 'verification' | 'pledge' | 'main';
 

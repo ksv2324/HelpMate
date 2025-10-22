@@ -4,6 +4,7 @@ import { ChatBox } from '../chat';
 import DonationList from './DonationList';
 import DonationForm from './DonationForm';
 import { useLanguage } from '../shared/LanguageContext';
+import { ScreenContainer } from '../shared';
 import { DONATIONS } from '../../constants/donations';
 import { Donation } from '../../types';
 
@@ -43,12 +44,12 @@ export default function DonationPage() {
   }
 
   return (
-    <div className="h-full bg-gray-50 flex flex-col">
+    <ScreenContainer className="bg-gray-50">
       {/* Content */}
-      <div className="flex-1 overflow-auto">
+      <div className="flex-1 overflow-auto min-w-0">
         {/* Info Box */}
         <div className="p-4">
-          <div className="bg-gradient-to-r from-[#4c6ef5] to-[#7950f2] rounded-2xl p-4 text-white shadow-md">
+          <div className="bg-linear-to-r from-[#4c6ef5] to-[#7950f2] rounded-2xl p-4 text-white shadow-md">
             <h3 className="mb-1">{t.nearbyDonations}</h3>
             <p className="text-white/90">
               Browse items available within 1-2 km. Accept to unlock chat with donors.
@@ -71,6 +72,6 @@ export default function DonationPage() {
       >
         <Plus className="w-7 h-7 text-white" />
       </button>
-    </div>
+    </ScreenContainer>
   );
 }

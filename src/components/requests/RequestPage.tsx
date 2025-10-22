@@ -4,6 +4,7 @@ import { ChatBox } from '../chat';
 import RequestList from './RequestList';
 import RequestForm from './RequestForm';
 import { useLanguage } from '../shared/LanguageContext';
+import { ScreenContainer } from '../shared';
 import { REQUESTS } from '../../constants/requests';
 import { Request } from '../../types';
 
@@ -43,12 +44,12 @@ export default function RequestPage() {
   }
 
   return (
-    <div className="h-full bg-gray-50 flex flex-col">
+    <ScreenContainer className="bg-gray-50">
       {/* Content */}
-      <div className="flex-1 overflow-auto">
+      <div className="flex-1 overflow-auto min-w-0">
         {/* Info Box */}
         <div className="p-4">
-          <div className="bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl p-4 text-white shadow-md">
+          <div className="bg-linear-to-r from-green-500 to-emerald-500 rounded-2xl p-4 text-white shadow-md">
             <h3 className="mb-1">{t.nearbyRequests}</h3>
             <p className="text-white/90">
               Help people nearby by donating what they need. Accept to unlock chat.
@@ -71,6 +72,6 @@ export default function RequestPage() {
       >
         <Plus className="w-7 h-7 text-white" />
       </button>
-    </div>
+    </ScreenContainer>
   );
 }

@@ -2,6 +2,7 @@ import { Heart, Gift, MapPin, Bell, Info, TrendingUp } from 'lucide-react';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 import { Badge } from '../ui/badge';
 import { useLanguage } from '../shared/LanguageContext';
+import { ScreenContainer } from '../shared';
 
 const latestActivity = [
   {
@@ -57,10 +58,11 @@ export default function HomePage() {
   const { t } = useLanguage();
 
   return (
-    <div className="h-full overflow-auto bg-gray-50">
+    <ScreenContainer className="bg-gray-50">
+      <div className="h-full overflow-auto min-w-0">
       {/* Welcome Section */}
       <div className="p-4">
-        <div className="bg-gradient-to-r from-[#4c6ef5] to-[#7950f2] rounded-2xl p-5 text-white shadow-md mb-4">
+        <div className="bg-linear-to-r from-[#4c6ef5] to-[#7950f2] rounded-2xl p-5 text-white shadow-md mb-4">
           <div className="flex items-start justify-between mb-3">
             <div className="flex-1">
               <h2 className="mb-1">Welcome to HelpMate</h2>
@@ -87,7 +89,7 @@ export default function HomePage() {
         {/* Info Box */}
         <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-4">
           <div className="flex gap-3">
-            <Info className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+            <Info className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
             <div>
               <h3 className="text-gray-900 mb-1">{t.howItWorks}</h3>
               <ul className="text-gray-700 space-y-1">
@@ -122,7 +124,7 @@ export default function HomePage() {
                   <p className="text-gray-500">{notif.time}</p>
                 </div>
                 {notif.isNew && (
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 shrink-0" />
                 )}
               </div>
             </div>
@@ -181,6 +183,7 @@ export default function HomePage() {
           ))}
         </div>
       </div>
-    </div>
+      </div>
+    </ScreenContainer>
   );
 }

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Heart, Gift, MapPin, Home, User, Bell } from 'lucide-react';
+import { Heart, Gift, MapPin, Home, User, Bell, Truck } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { DonationPage } from '../donations';
 import { RequestPage } from '../requests';
@@ -7,15 +7,16 @@ import { MapPage } from '../map';
 import { HomePage } from '../home';
 import { ProfilePage } from '../profile';
 import { NotificationsPage } from '../notifications';
+import { VolunteerPage } from '../volunteer';
 import { NotificationPreferences, PrivacySecurity, HelpSupport, AboutApp } from '../settings';
 import HelpMateLogo from './HelpMateLogo';
 import { useLanguage } from './LanguageContext';
+import type { Tab } from '../../types';
 
 interface MainAppProps {
   userPhone: string;
 }
 
-export type Tab = 'home' | 'donation' | 'request' | 'map';
 export type SettingsScreen = 'profile' | 'notif-prefs' | 'privacy' | 'help' | 'about';
 
 export default function MainApp({ userPhone }: MainAppProps) {
@@ -58,7 +59,7 @@ export default function MainApp({ userPhone }: MainAppProps) {
     <div className="h-full bg-gray-50 flex flex-col">
       {/* Top Header */}
       <div className="bg-white border-b border-gray-200 shadow-sm">
-        <div className="flex items-center justify-between px-4 pt-12 pb-3">
+        <div className="flex items-center justify-between px-4 py-3">
           <div className="flex items-center gap-2">
             <div className="w-10 h-10 bg-[#4c6ef5] rounded-xl flex items-center justify-center shadow-sm">
               <HelpMateLogo className="w-8 h-8" />
@@ -93,7 +94,7 @@ export default function MainApp({ userPhone }: MainAppProps) {
             }`}
           >
             <Home className="w-5 h-5" />
-            <span>{t.home}</span>
+            <span className="text-xs sm:text-sm">{t.home}</span>
           </button>
           <button
             onClick={() => setActiveTab('donation')}
@@ -104,7 +105,7 @@ export default function MainApp({ userPhone }: MainAppProps) {
             }`}
           >
             <Heart className="w-5 h-5" />
-            <span>{t.donation}</span>
+            <span className="text-xs sm:text-sm">{t.donation}</span>
           </button>
           <button
             onClick={() => setActiveTab('request')}
@@ -115,7 +116,18 @@ export default function MainApp({ userPhone }: MainAppProps) {
             }`}
           >
             <Gift className="w-5 h-5" />
-            <span>{t.request}</span>
+            <span className="text-xs sm:text-sm">{t.request}</span>
+          </button>
+          <button
+            onClick={() => setActiveTab('volunteer')}
+            className={`flex-1 py-3 flex items-center justify-center gap-2 transition-colors ${
+              activeTab === 'volunteer'
+                ? 'text-[#4c6ef5] border-b-2 border-[#4c6ef5] bg-blue-50'
+                : 'text-gray-500 hover:text-gray-700'
+            }`}
+          >
+            <Truck className="w-5 h-5" />
+            <span className="text-xs sm:text-sm">{t.volunteer}</span>
           </button>
           <button
             onClick={() => setActiveTab('map')}
@@ -126,13 +138,13 @@ export default function MainApp({ userPhone }: MainAppProps) {
             }`}
           >
             <MapPin className="w-5 h-5" />
-            <span>{t.map}</span>
+            <span className="text-xs sm:text-sm">{t.map}</span>
           </button>
         </div>
       </div>
 
       {/* Content Area with Fade Transitions */}
-      <div className="flex-1 overflow-hidden relative">
+      <div className="flex-1 overflow-hidden relative w-screen">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
@@ -145,6 +157,7 @@ export default function MainApp({ userPhone }: MainAppProps) {
             {activeTab === 'home' && <HomePage />}
             {activeTab === 'donation' && <DonationPage />}
             {activeTab === 'request' && <RequestPage />}
+            {activeTab === 'volunteer' && <VolunteerPage />}
             {activeTab === 'map' && <MapPage />}
           </motion.div>
         </AnimatePresence>

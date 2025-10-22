@@ -13,6 +13,7 @@ import {
 import { Checkbox } from '../ui/checkbox';
 import { Label } from '../ui/label';
 import { Slider } from '../ui/slider';
+import { ScreenContainer } from '../shared';
 
 interface MapScreenProps {
   onBack: () => void;
@@ -34,9 +35,9 @@ export default function MapScreen({ onBack, onSelectDonation }: MapScreenProps) 
   const [showUrgent, setShowUrgent] = useState(true);
 
   return (
-    <div className="h-full bg-white flex flex-col">
+    <ScreenContainer>
       {/* Header */}
-      <div className="bg-white px-6 pt-12 pb-4 border-b border-gray-200 shadow-sm">
+      <div className="bg-white px-6 pt-12 pb-4 border-b border-gray-200 shadow-sm shrink-0">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
             <button
@@ -97,7 +98,7 @@ export default function MapScreen({ onBack, onSelectDonation }: MapScreenProps) 
       </div>
 
       {/* Map */}
-      <div className="flex-1 relative overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
+      <div className="flex-1 relative overflow-hidden bg-linear-to-br from-gray-100 to-gray-200 min-w-0">
         {/* Simulated Map Background */}
         <div className="absolute inset-0">
           {/* Grid pattern to simulate map */}
@@ -176,7 +177,7 @@ export default function MapScreen({ onBack, onSelectDonation }: MapScreenProps) 
 
       {/* Selected Pin Details */}
       {selectedPin && (
-        <div className="absolute bottom-0 left-0 right-0 bg-white rounded-t-3xl shadow-2xl p-6 border-t border-gray-200">
+        <div className="absolute bottom-0 left-0 right-0 bg-white rounded-t-3xl shadow-2xl p-6 border-t border-gray-200 min-w-0">
           <div className="w-12 h-1 bg-gray-300 rounded-full mx-auto mb-4" />
           
           <div className="flex items-start justify-between mb-3">
@@ -224,6 +225,6 @@ export default function MapScreen({ onBack, onSelectDonation }: MapScreenProps) 
           </Button>
         </div>
       )}
-    </div>
+    </ScreenContainer>
   );
 }
