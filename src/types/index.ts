@@ -45,4 +45,17 @@ export interface UserProfile {
 
 export type Tab = 'home' | 'donation' | 'request' | 'map';
 export type SettingsScreen = 'profile' | 'notif-prefs' | 'privacy' | 'help' | 'about';
-export type AuthScreen = 'splash' | 'onboarding' | 'login' | 'otp' | 'pledge' | 'main';
+export type AuthScreen = 'splash' | 'onboarding' | 'language' | 'userDetails' | 'aadhar' | 'otp' | 'role' | 'verification' | 'pledge' | 'main';
+
+export type UserRole = 'volunteer' | 'receiver' | 'donor' | null;
+export type VerificationType = 'orphanage' | 'ngo' | 'driver' | 'none';
+
+export interface UserDetails {
+  name: string;
+  phone: string;
+  email?: string;
+  aadhar: string;
+  language: string;
+  role: UserRole;
+  verificationType: VerificationType;
+}
