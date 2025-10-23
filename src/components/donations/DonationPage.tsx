@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Plus } from 'lucide-react';
+import { motion } from 'motion/react';
 import { ChatBox } from '../chat';
 import DonationList from './DonationList';
 import DonationForm from './DonationForm';
@@ -66,12 +67,14 @@ export default function DonationPage() {
       </div>
 
       {/* Floating Add Button */}
-      <button
+      <motion.button
         onClick={() => setShowAddDonation(true)}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
         className="absolute bottom-6 right-6 w-14 h-14 bg-[#4c6ef5] rounded-full flex items-center justify-center shadow-lg hover:bg-[#4263eb] transition-colors"
       >
         <Plus className="w-7 h-7 text-white" />
-      </button>
+      </motion.button>
     </ScreenContainer>
   );
 }

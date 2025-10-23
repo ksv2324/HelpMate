@@ -10,7 +10,7 @@ interface ProfileScreenProps {
 
 export default function ProfileScreen({ onBack, onNavigate }: ProfileScreenProps) {
   return (
-    <div className="h-full bg-white flex flex-col">
+    <div className="h-full bg-white flex flex-col w-screen">
       {/* Header */}
       <div className="bg-white px-6 pt-12 pb-4 border-b border-gray-200 shadow-sm">
         <div className="flex items-center gap-4 mb-2">

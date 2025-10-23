@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Plus } from 'lucide-react';
+import { motion } from 'motion/react';
 import { ChatBox } from '../chat';
 import RequestList from './RequestList';
 import RequestForm from './RequestForm';
@@ -66,12 +67,14 @@ export default function RequestPage() {
       </div>
 
       {/* Floating Add Button */}
-      <button
+      <motion.button
         onClick={() => setShowAddRequest(true)}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
         className="absolute bottom-6 right-6 w-14 h-14 bg-green-600 rounded-full flex items-center justify-center shadow-lg hover:bg-green-700 transition-colors"
       >
         <Plus className="w-7 h-7 text-white" />
-      </button>
+      </motion.button>
     </ScreenContainer>
   );
 }

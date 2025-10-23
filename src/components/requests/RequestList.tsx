@@ -1,4 +1,5 @@
 import { MapPin, MessageCircle } from 'lucide-react';
+import { motion } from 'motion/react';
 import { Button } from '../ui/button';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 import { useLanguage } from '../shared/LanguageContext';
@@ -27,13 +28,18 @@ export default function RequestList({
       </div>
       
       <div className="space-y-4">
-        {requests.map((request) => {
+        {requests.map((request, index) => {
           const isAccepted = acceptedRequests.has(request.id);
           
           return (
-            <div 
-              key={request.id} 
-              className="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition-shadow"
+            <motion.div
+              key={request.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: index * 0.05 }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition-shadow cursor-pointer"
             >
               <div className="relative h-48">
                 <ImageWithFallback
@@ -41,10 +47,15 @@ export default function RequestList({
                   alt={request.title}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-sm text-white px-3 py-1 rounded-full flex items-center gap-1">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.2 + index * 0.05 }}
+                  className="absolute top-3 right-3 bg-black/60 backdrop-blur-sm text-white px-3 py-1 rounded-full flex items-center gap-1"
+                >
                   <MapPin className="w-3 h-3" />
                   {request.distance}
-                </div>
+                </motion.div>
               </div>
               
               <div className="p-4">
@@ -76,7 +87,7 @@ export default function RequestList({
                   </Button>
                 )}
               </div>
-            </div>
+            </motion.div>
           );
         })}
       </div>

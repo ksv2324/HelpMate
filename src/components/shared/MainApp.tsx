@@ -67,26 +67,36 @@ export default function MainApp({ userPhone }: MainAppProps) {
             <h1 className="text-gray-900">HelpMate</h1>
           </div>
           <div className="flex items-center gap-2">
-            <button
+            <motion.button
               onClick={() => setShowNotifications(true)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors relative"
             >
               <Bell className="w-5 h-5 text-gray-700" />
-              <div className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full" />
-            </button>
-            <button
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 0.5, type: 'spring' }}
+                className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"
+              />
+            </motion.button>
+            <motion.button
               onClick={() => setSettingsScreen('profile')}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors"
             >
               <User className="w-5 h-5 text-gray-700" />
-            </button>
+            </motion.button>
           </div>
         </div>
 
         {/* Tab Navigation */}
         <div className="flex border-t border-gray-200">
-          <button
+          <motion.button
             onClick={() => setActiveTab('home')}
+            whileTap={{ scale: 0.95 }}
             className={`flex-1 py-3 flex items-center justify-center gap-2 transition-colors ${
               activeTab === 'home'
                 ? 'text-[#4c6ef5] border-b-2 border-[#4c6ef5] bg-blue-50'
@@ -95,9 +105,10 @@ export default function MainApp({ userPhone }: MainAppProps) {
           >
             <Home className="w-5 h-5" />
             <span className="text-xs sm:text-sm">{t.home}</span>
-          </button>
-          <button
+          </motion.button>
+          <motion.button
             onClick={() => setActiveTab('donation')}
+            whileTap={{ scale: 0.95 }}
             className={`flex-1 py-3 flex items-center justify-center gap-2 transition-colors ${
               activeTab === 'donation'
                 ? 'text-[#4c6ef5] border-b-2 border-[#4c6ef5] bg-blue-50'
@@ -106,9 +117,10 @@ export default function MainApp({ userPhone }: MainAppProps) {
           >
             <Heart className="w-5 h-5" />
             <span className="text-xs sm:text-sm">{t.donation}</span>
-          </button>
-          <button
+          </motion.button>
+          <motion.button
             onClick={() => setActiveTab('request')}
+            whileTap={{ scale: 0.95 }}
             className={`flex-1 py-3 flex items-center justify-center gap-2 transition-colors ${
               activeTab === 'request'
                 ? 'text-[#4c6ef5] border-b-2 border-[#4c6ef5] bg-blue-50'
@@ -117,9 +129,10 @@ export default function MainApp({ userPhone }: MainAppProps) {
           >
             <Gift className="w-5 h-5" />
             <span className="text-xs sm:text-sm">{t.request}</span>
-          </button>
-          <button
+          </motion.button>
+          <motion.button
             onClick={() => setActiveTab('volunteer')}
+            whileTap={{ scale: 0.95 }}
             className={`flex-1 py-3 flex items-center justify-center gap-2 transition-colors ${
               activeTab === 'volunteer'
                 ? 'text-[#4c6ef5] border-b-2 border-[#4c6ef5] bg-blue-50'
@@ -128,9 +141,10 @@ export default function MainApp({ userPhone }: MainAppProps) {
           >
             <Truck className="w-5 h-5" />
             <span className="text-xs sm:text-sm">{t.volunteer}</span>
-          </button>
-          <button
+          </motion.button>
+          <motion.button
             onClick={() => setActiveTab('map')}
+            whileTap={{ scale: 0.95 }}
             className={`flex-1 py-3 flex items-center justify-center gap-2 transition-colors ${
               activeTab === 'map'
                 ? 'text-[#4c6ef5] border-b-2 border-[#4c6ef5] bg-blue-50'
@@ -139,7 +153,7 @@ export default function MainApp({ userPhone }: MainAppProps) {
           >
             <MapPin className="w-5 h-5" />
             <span className="text-xs sm:text-sm">{t.map}</span>
-          </button>
+          </motion.button>
         </div>
       </div>
 

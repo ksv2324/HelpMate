@@ -1,4 +1,5 @@
 import { Heart, Gift, MapPin, Bell, Info, TrendingUp } from 'lucide-react';
+import { motion } from 'motion/react';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 import { Badge } from '../ui/badge';
 import { useLanguage } from '../shared/LanguageContext';
@@ -113,9 +114,12 @@ export default function HomePage() {
           </Badge>
         </div>
         <div className="bg-white rounded-2xl shadow-sm divide-y divide-gray-100">
-          {nearbyNotifications.map((notif) => (
-            <div 
-              key={notif.id} 
+          {nearbyNotifications.map((notif, index) => (
+            <motion.div 
+              key={notif.id}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.3, delay: index * 0.05 }}
               className={`p-4 hover:bg-gray-50 transition-colors ${notif.isNew ? 'bg-blue-50' : ''}`}
             >
               <div className="flex items-start justify-between gap-3">
@@ -124,10 +128,15 @@ export default function HomePage() {
                   <p className="text-gray-500">{notif.time}</p>
                 </div>
                 {notif.isNew && (
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 shrink-0" />
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ delay: index * 0.05 + 0.2, type: 'spring' }}
+                    className="w-2 h-2 bg-blue-500 rounded-full mt-2 shrink-0"
+                  />
                 )}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -139,8 +148,16 @@ export default function HomePage() {
           <h3 className="text-gray-900">{t.latestActivity}</h3>
         </div>
         <div className="space-y-4">
-          {latestActivity.map((item) => (
-            <div key={item.id} className="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+          {latestActivity.map((item, index) => (
+            <motion.div
+              key={item.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: index * 0.1 }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition-shadow"
+            >
               <div className="relative h-48">
                 <ImageWithFallback
                   src={item.image}
@@ -162,10 +179,15 @@ export default function HomePage() {
                     </>
                   )}
                 </Badge>
-                <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-sm text-white px-3 py-1 rounded-full flex items-center gap-1">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: index * 0.1 + 0.2 }}
+                  className="absolute top-3 right-3 bg-black/60 backdrop-blur-sm text-white px-3 py-1 rounded-full flex items-center gap-1"
+                >
                   <MapPin className="w-3 h-3" />
                   {item.distance}
-                </div>
+                </motion.div>
               </div>
               
               <div className="p-4">
@@ -179,7 +201,7 @@ export default function HomePage() {
                   <span className="text-gray-400">{item.time}</span>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

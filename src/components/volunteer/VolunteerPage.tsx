@@ -10,24 +10,24 @@ export const VolunteerPage = () => {
   const [activeSubTab, setActiveSubTab] = useState<VolunteerSubTab>('available');
 
   return (
-    <div className="h-full flex flex-col bg-background">
+    <div className="h-full flex flex-col bg-white">
       {/* Sub-tab Navigation */}
-      <div className="bg-card border-b border-border">
+      <div className="bg-white border-b border-gray-200">
         <div className="flex">
           <button
             onClick={() => setActiveSubTab('available')}
             className={`flex-1 py-3 px-4 text-center font-medium transition-colors relative ${
               activeSubTab === 'available'
-                ? 'text-primary'
-                : 'text-muted-foreground hover:text-foreground'
+                ? 'text-[#4c6ef5]'
+                : 'text-gray-500 hover:text-gray-700'
             }`}
           >
             <div className="flex items-center justify-center gap-2">
               <Package className="w-5 h-5" />
-              <span>{t.available || 'Available'}</span>
+              <span className="text-sm">{t.available || 'Available'}</span>
             </div>
             {activeSubTab === 'available' && (
-              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"></div>
+              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#4c6ef5]"></div>
             )}
           </button>
           
@@ -35,16 +35,16 @@ export const VolunteerPage = () => {
             onClick={() => setActiveSubTab('myDeliveries')}
             className={`flex-1 py-3 px-4 text-center font-medium transition-colors relative ${
               activeSubTab === 'myDeliveries'
-                ? 'text-primary'
-                : 'text-muted-foreground hover:text-foreground'
+                ? 'text-[#4c6ef5]'
+                : 'text-gray-500 hover:text-gray-700'
             }`}
           >
             <div className="flex items-center justify-center gap-2">
               <Truck className="w-5 h-5" />
-              <span>{t.myDeliveries || 'My Deliveries'}</span>
+              <span className="text-sm">{t.myDeliveries || 'My Deliveries'}</span>
             </div>
             {activeSubTab === 'myDeliveries' && (
-              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"></div>
+              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#4c6ef5]"></div>
             )}
           </button>
         </div>

@@ -37,7 +37,7 @@ export default function ProfilePage({ onBack, onNavigate }: ProfilePageProps) {
   };
 
   return (
-    <div className="h-full bg-white flex flex-col">
+    <div className="h-full bg-white flex flex-col w-screen">
       {/* Header */}
       <div className="bg-white px-4 pt-12 pb-4 border-b border-gray-200 shadow-sm">
         <div className="flex items-center gap-4">
