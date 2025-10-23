@@ -59,7 +59,7 @@ export default function MainApp({ userPhone }: MainAppProps) {
     <div className="h-full bg-gray-50 flex flex-col">
       {/* Top Header */}
       <div className="bg-white border-b border-gray-200 shadow-sm">
-        <div className="flex items-center justify-between px-4 py-3">
+        <div className="flex items-center justify-between px-4 pt-12 pb-4">
           <div className="flex items-center gap-2">
             <div className="w-10 h-10 bg-[#4c6ef5] rounded-xl flex items-center justify-center shadow-sm">
               <HelpMateLogo className="w-8 h-8" />
