@@ -86,6 +86,8 @@ const createCustomIcon = (type: 'donation' | 'request') => {
 
 export default function LeafletMap({ markers, center, zoom, onMarkerClick, onLocationClick }: LeafletMapProps) {
   const mapRef = useRef<L.Map | null>(null);
+  const currentLocationRef = useRef<L.Marker | null>(null);
+  const circleRef = useRef<L.Circle | null>(null);
   const mapContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -138,12 +140,12 @@ export default function LeafletMap({ markers, center, zoom, onMarkerClick, onLoc
       iconAnchor: [8, 8]
     });
 
-    L.marker(center, { icon: currentLocationIcon })
+    currentLocationRef.current = L.marker(center, { icon: currentLocationIcon })
       .addTo(map)
       .bindPopup('Your Location');
 
     // Add 2km radius circle
-    L.circle(center, {
+    circleRef.current = L.circle(center, {
       color: '#4c6ef5',
       fillColor: '#4c6ef5',
       fillOpacity: 0.1,
@@ -178,6 +180,8 @@ export default function LeafletMap({ markers, center, zoom, onMarkerClick, onLoc
     return () => {
       map.remove();
       mapRef.current = null;
+      currentLocationRef.current = null;
+      circleRef.current = null;
       document.head.removeChild(style);
     };
   }, []);
@@ -215,6 +219,13 @@ export default function LeafletMap({ markers, center, zoom, onMarkerClick, onLoc
   useEffect(() => {
     if (!mapRef.current) return;
     mapRef.current.setView(center, zoom);
+    // Move current location marker and circle to new center if they exist
+    if (currentLocationRef.current) {
+      currentLocationRef.current.setLatLng(center);
+    }
+    if (circleRef.current) {
+      circleRef.current.setLatLng(center);
+    }
   }, [center, zoom]);
 
   return (

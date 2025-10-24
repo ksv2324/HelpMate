@@ -24,7 +24,7 @@ export default function MapPage() {
   const [selectedMarker, setSelectedMarker] = useState<MapMarker | null>(null);
   const [acceptedMarkers, setAcceptedMarkers] = useState<Set<string>>(new Set());
   const [chatMarker, setChatMarker] = useState<MapMarker | null>(null);
-  const [mapCenter] = useState<[number, number]>(BANGALORE_CENTER);
+  const [mapCenter, setMapCenter] = useState<[number, number]>(BANGALORE_CENTER);
   const [mapZoom] = useState(15);
   const { t } = useLanguage();
 
@@ -39,9 +39,27 @@ export default function MapPage() {
   };
 
   const handleRecenterMap = () => {
-    // In a real app, this would get the user's current location
-    // For now, we'll just reset to center
-    window.location.reload();
+    // Try to get the user's current geolocation and recenter the map
+    if (!('geolocation' in navigator)) {
+      // Fallback: reset to default center
+      setMapCenter(BANGALORE_CENTER);
+      console.warn('Geolocation not available, using default center');
+      return;
+    }
+
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        const { latitude, longitude } = pos.coords;
+        setMapCenter([latitude, longitude]);
+      },
+      (err) => {
+        console.warn('Could not get current position:', err.message);
+        // On error (permission denied, timeout), keep current center or fallback
+        // Optionally reset to default
+        // setMapCenter(BANGALORE_CENTER);
+      },
+      { enableHighAccuracy: true, timeout: 8000 }
+    );
   };
 
   if (chatMarker) {
